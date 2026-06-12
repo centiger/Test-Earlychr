@@ -111,18 +111,53 @@ footer.actions{
 }
 </style>
 
+
+<style id="earlychurch-clean-v5-layout">
+.hotspot{display:none!important;pointer-events:none!important}
+html,body{background:#05080d!important;overscroll-behavior-y:contain!important}
+body{padding-bottom:108px!important}
+.app{max-width:853px;margin:0 auto;padding-bottom:0!important;background:#05080d!important}
+.stage{position:relative;width:100%;line-height:0;margin-bottom:0!important;background:#05080d!important}
+.bg{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important;object-position:top center!important;user-select:none;-webkit-user-drag:none}
+
+/* clean long background 기준 버튼 위치 */
+.ar1{top:24.5%!important}
+.ar2{top:40.7%!important}
+.ar3{top:56.9%!important}
+.ar4{top:73.1%!important}
+.ar5{top:89.2%!important}
+.mainActionRow{left:14.7%!important;width:34.5%!important;gap:4px!important}
+.mainActionRow .miniBtn{min-height:22px!important;font-size:9.2px!important}
+
+.cen-bottom-solid-bg{height:108px!important;background:#05080d!important;box-shadow:none!important}
+.era-flow-strip{bottom:62px!important;background:#05080d!important;border-top:1px solid rgba(255,207,117,.28)!important;box-shadow:none!important}
+footer.actions{min-height:62px!important;background:#05080d!important;box-shadow:none!important}
+
+@media(max-width:390px){
+  body{padding-bottom:104px!important}
+  .ar1{top:24.4%!important}
+  .ar2{top:40.6%!important}
+  .ar3{top:56.8%!important}
+  .ar4{top:73.0%!important}
+  .ar5{top:89.1%!important}
+  .mainActionRow{left:14.5%!important;width:35.5%!important;gap:3px!important}
+  .mainActionRow .miniBtn{font-size:8.4px!important;min-height:20px!important;padding:3px 1px!important}
+  .cen-bottom-solid-bg{height:104px!important}
+  .era-flow-strip{bottom:60px!important}
+  footer.actions{min-height:60px!important}
+}
+</style>
+
 </head>
 <body>
 <div class="app">
   <div class="stage" aria-label="초대교회 Matrix 메인화면">
-    <img class="bg" src="assets/earlychurch-main-bg-long-v4.png?v=earlychurch-long-v4" alt="초대교회 Matrix 배경" />
-    <a class="hotspot hs1" href="hubs/index.html?hub=pentecost"><span class="sr-only">오순절 성령강림 허브</span></a>
-    <a class="hotspot hs2" href="hubs/index.html?hub=expansion"><span class="sr-only">복음 확장 허브</span></a>
-    <a class="hotspot hs3" href="hubs/index.html?hub=persecution"><span class="sr-only">박해와 성장 허브</span></a>
-    <a class="hotspot hs4" href="hubs/index.html?hub=mission"><span class="sr-only">선교와 서신 허브</span></a>
-    <a class="hotspot hs5" href="hubs/index.html?hub=revelation"><span class="sr-only">계시와 재림소망 허브</span></a>
+    <img class="bg" src="assets/earlychurch-main-bg-clean-v5.png?v=earlychurch-clean-v5" alt="초대교회 Matrix 배경" />
 
-    <div class="mainActionRow ar1"><a href="hubs/index.html?hub=pentecost" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=pentecost#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=pentecost#integration" class="miniBtn">통합탐험</a></div>
+
+
+
+<div class="mainActionRow ar1"><a href="hubs/index.html?hub=pentecost" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=pentecost#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=pentecost#integration" class="miniBtn">통합탐험</a></div>
     <div class="mainActionRow ar2"><a href="hubs/index.html?hub=expansion" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=expansion#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=expansion#integration" class="miniBtn">통합탐험</a></div>
     <div class="mainActionRow ar3"><a href="hubs/index.html?hub=persecution" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=persecution#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=persecution#integration" class="miniBtn">통합탐험</a></div>
     <div class="mainActionRow ar4"><a href="hubs/index.html?hub=mission" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=mission#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=mission#integration" class="miniBtn">통합탐험</a></div>
@@ -174,7 +209,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
 })();
 </script>
 
-<script id="CEN-EARLYCHURCH-SCROLL-LIMIT-V4">
+<script id="CEN-EARLYCHURCH-SCROLL-LIMIT-V5">
 (function(){
   function bottomUiHeight(){
     const flow=document.querySelector('.era-flow-strip');
@@ -186,7 +221,6 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
     if(!img) return Math.max(0, document.documentElement.scrollHeight-window.innerHeight);
     const rect=img.getBoundingClientRect();
     const imgBottom=window.scrollY+rect.bottom;
-    // 긴 이미지는 이미지 끝과 하단 고정 UI가 맞닿는 지점까지 드래그 허용
     return Math.max(0, imgBottom-window.innerHeight+bottomUiHeight());
   }
   let ticking=false;
