@@ -232,11 +232,32 @@ footer.actions{min-height:62px!important;background:#05080d!important;box-shadow
 }
 </style>
 
+
+<style id="earlychurch-v10-title-overlay">
+.stage{position:relative}
+.v10-title-fix{
+  position:absolute;left:13.2%;top:67.9%;z-index:24;width:25%;min-height:64px;
+  background:linear-gradient(90deg,rgba(5,8,13,.97) 0%,rgba(5,8,13,.86) 62%,rgba(5,8,13,0) 100%);
+  color:#fff;font-weight:950;letter-spacing:-.085em;line-height:1.05;font-size:21px;
+  display:flex;align-items:center;text-shadow:0 2px 6px rgba(0,0,0,.9);pointer-events:none;
+}
+.v10-subtitle-fix{
+  position:absolute;left:13.2%;top:72.8%;z-index:25;width:22%;
+  color:#f5b83b;font-weight:950;font-size:13px;letter-spacing:-.07em;
+  text-shadow:0 2px 5px rgba(0,0,0,.9);pointer-events:none;
+}
+@media(max-width:390px){
+  .v10-title-fix{left:13%;top:67.8%;font-size:18px;min-height:56px;width:27%}
+  .v10-subtitle-fix{left:13%;top:72.6%;font-size:11.5px;width:25%}
+}
+</style>
+
 </head>
 <body>
 <div class="app">
   <div class="stage" aria-label="초대교회 Matrix 메인화면">
     <img class="bg" src="assets/earlychurch-main-bg-clean-v5.png?v=earlychurch-clean-v5" alt="초대교회 Matrix 배경" />
+<div class="v10-title-fix">바울과<br>열방선교</div><div class="v10-subtitle-fix">교회의 세계화</div>
 
 
 
