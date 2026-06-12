@@ -28,21 +28,83 @@ footer.actions .action[data-link="hub"],footer.actions .main{background:linear-g
 @media(max-width:390px){body{padding-bottom:108px!important}.mainActionRow{left:17%;width:34.5%;gap:3px}.mainActionRow .miniBtn{font-size:8.4px;min-height:20px;padding:3px 1px}.ar1{top:25.8%}.ar2{top:43.6%}.ar3{top:60.4%}.ar4{top:77.0%}.ar5{top:94.4%}.cen-bottom-solid-bg{height:104px}.era-flow-strip{bottom:60px}.era-flow-strip .flow-title{font-size:10px}.era-flow-strip .flow-text{font-size:11.2px}footer.actions{min-height:60px}footer.actions .action{min-height:39px;font-size:11px}}
 </style>
 
-<style id="earlychurch-v2-final-layout">
-html,body{background:#05080d!important;overscroll-behavior-y:contain!important}
-body{padding-bottom:108px!important}
-.app{padding-bottom:0!important;margin-bottom:0!important}
-.stage{margin-bottom:0!important}
-.bg{display:block!important;width:100%!important;height:auto!important;object-fit:contain!important}
-.ar1{top:25.8%!important}
-.ar5{top:94.4%!important}
-.cen-bottom-solid-bg{height:108px!important;background:#05080d!important;box-shadow:none!important}
-.era-flow-strip{bottom:62px!important;background:#05080d!important;border-top:1px solid rgba(255,207,117,.28)!important;box-shadow:none!important}
-footer.actions{min-height:62px!important;background:#05080d!important;box-shadow:none!important}
+<style id="earlychurch-v4-longbg-layout">
+html,body{
+  margin:0;
+  background:#05080d!important;
+  overscroll-behavior-y:contain!important;
+}
+body{
+  padding-bottom:108px!important;
+}
+.app{
+  max-width:853px;
+  margin:0 auto;
+  padding-bottom:0!important;
+  background:#05080d!important;
+}
+.stage{
+  position:relative;
+  width:100%;
+  line-height:0;
+  margin-bottom:0!important;
+  background:#05080d!important;
+}
+.bg{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  object-fit:contain!important;
+  object-position:top center!important;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+/* 긴 배경이미지 기준 버튼 위치 */
+.ar1{top:24.3%!important}
+.ar2{top:40.3%!important}
+.ar3{top:56.5%!important}
+.ar4{top:72.7%!important}
+.ar5{top:88.9%!important}
+
+.mainActionRow{
+  left:14.7%!important;
+  width:34.5%!important;
+  gap:4px!important;
+}
+.mainActionRow .miniBtn{
+  min-height:22px!important;
+  font-size:9.2px!important;
+}
+
+/* 하단 고정 패널 */
+.cen-bottom-solid-bg{
+  height:108px!important;
+  background:#05080d!important;
+  box-shadow:none!important;
+}
+.era-flow-strip{
+  bottom:62px!important;
+  background:#05080d!important;
+  border-top:1px solid rgba(255,207,117,.28)!important;
+  box-shadow:none!important;
+}
+footer.actions{
+  min-height:62px!important;
+  background:#05080d!important;
+  box-shadow:none!important;
+}
+
 @media(max-width:390px){
   body{padding-bottom:104px!important}
-  .ar1{top:25.7%!important}
-  .ar5{top:94.2%!important}
+  .ar1{top:24.2%!important}
+  .ar2{top:40.2%!important}
+  .ar3{top:56.4%!important}
+  .ar4{top:72.6%!important}
+  .ar5{top:88.8%!important}
+  .mainActionRow{left:14.5%!important;width:35.5%!important;gap:3px!important}
+  .mainActionRow .miniBtn{font-size:8.4px!important;min-height:20px!important;padding:3px 1px!important}
   .cen-bottom-solid-bg{height:104px!important}
   .era-flow-strip{bottom:60px!important}
   footer.actions{min-height:60px!important}
@@ -53,7 +115,7 @@ footer.actions{min-height:62px!important;background:#05080d!important;box-shadow
 <body>
 <div class="app">
   <div class="stage" aria-label="초대교회 Matrix 메인화면">
-    <img class="bg" src="assets/earlychurch-main-bg.png?v=earlychurch-v1" alt="초대교회 Matrix 배경" />
+    <img class="bg" src="assets/earlychurch-main-bg-long-v4.png?v=earlychurch-long-v4" alt="초대교회 Matrix 배경" />
     <a class="hotspot hs1" href="hubs/index.html?hub=pentecost"><span class="sr-only">오순절 성령강림 허브</span></a>
     <a class="hotspot hs2" href="hubs/index.html?hub=expansion"><span class="sr-only">복음 확장 허브</span></a>
     <a class="hotspot hs3" href="hubs/index.html?hub=persecution"><span class="sr-only">박해와 성장 허브</span></a>
@@ -112,7 +174,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
 })();
 </script>
 
-<script id="CEN-EARLYCHURCH-SCROLL-LIMIT-V2">
+<script id="CEN-EARLYCHURCH-SCROLL-LIMIT-V4">
 (function(){
   function bottomUiHeight(){
     const flow=document.querySelector('.era-flow-strip');
@@ -124,6 +186,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
     if(!img) return Math.max(0, document.documentElement.scrollHeight-window.innerHeight);
     const rect=img.getBoundingClientRect();
     const imgBottom=window.scrollY+rect.bottom;
+    // 긴 이미지는 이미지 끝과 하단 고정 UI가 맞닿는 지점까지 드래그 허용
     return Math.max(0, imgBottom-window.innerHeight+bottomUiHeight());
   }
   let ticking=false;
@@ -136,7 +199,7 @@ if('serviceWorker' in navigator){navigator.serviceWorker.register('./sw.js').cat
     ticking=true;
     requestAnimationFrame(function(){clamp();ticking=false;});
   },{passive:true});
-  window.addEventListener('load',function(){setTimeout(clamp,150)});
+  window.addEventListener('load',function(){setTimeout(clamp,180)});
   window.addEventListener('resize',clamp);
 })();
 </script>
