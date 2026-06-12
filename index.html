@@ -148,6 +148,56 @@ footer.actions{min-height:62px!important;background:#05080d!important;box-shadow
 }
 </style>
 
+
+<style id="earlychurch-button-labels-v6">
+/* 버튼은 각 대표이미지 경계 안에서 주제어/설명 아래쪽에 배치 */
+.mainActionRow{
+  left:10.8%!important;
+  width:43.5%!important;
+  grid-template-columns:1.18fr 1fr 1fr!important;
+  gap:4px!important;
+  z-index:22!important;
+}
+.mainActionRow .miniBtn{
+  min-height:23px!important;
+  padding:4px 4px!important;
+  font-size:8.7px!important;
+  letter-spacing:-.08em!important;
+  border-radius:999px!important;
+  white-space:nowrap!important;
+  line-height:1!important;
+}
+.mainActionRow .miniBtn.hub{
+  font-size:8.5px!important;
+}
+
+/* 각 행 위치: 위쪽 대표이미지 라인 넘지 않게 조정 */
+.ar1{top:22.7%!important}
+.ar2{top:38.9%!important}
+.ar3{top:55.1%!important}
+.ar4{top:71.3%!important}
+.ar5{top:87.5%!important}
+
+@media(max-width:390px){
+  .mainActionRow{
+    left:10.3%!important;
+    width:45.0%!important;
+    gap:3px!important;
+  }
+  .mainActionRow .miniBtn{
+    font-size:7.8px!important;
+    min-height:21px!important;
+    padding:3px 2px!important;
+  }
+  .mainActionRow .miniBtn.hub{font-size:7.5px!important}
+  .ar1{top:22.6%!important}
+  .ar2{top:38.8%!important}
+  .ar3{top:55.0%!important}
+  .ar4{top:71.2%!important}
+  .ar5{top:87.4%!important}
+}
+</style>
+
 </head>
 <body>
 <div class="app">
@@ -157,11 +207,11 @@ footer.actions{min-height:62px!important;background:#05080d!important;box-shadow
 
 
 
-<div class="mainActionRow ar1"><a href="hubs/index.html?hub=pentecost" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=pentecost#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=pentecost#integration" class="miniBtn">통합탐험</a></div>
-    <div class="mainActionRow ar2"><a href="hubs/index.html?hub=expansion" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=expansion#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=expansion#integration" class="miniBtn">통합탐험</a></div>
-    <div class="mainActionRow ar3"><a href="hubs/index.html?hub=persecution" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=persecution#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=persecution#integration" class="miniBtn">통합탐험</a></div>
-    <div class="mainActionRow ar4"><a href="hubs/index.html?hub=mission" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=mission#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=mission#integration" class="miniBtn">통합탐험</a></div>
-    <div class="mainActionRow ar5"><a href="hubs/index.html?hub=revelation" class="miniBtn hub">허브</a><a href="hubs/index.html?hub=revelation#connections" class="miniBtn">연결탐험</a><a href="hubs/index.html?hub=revelation#integration" class="miniBtn">통합탐험</a></div>
+<div class="mainActionRow ar1"><a href="hubs/index.html?hub=pentecost" class="miniBtn hub">🏠 오순절 허브</a><a href="hubs/index.html?hub=pentecost#connections" class="miniBtn">🔗 연결탐험</a><a href="hubs/index.html?hub=pentecost#integration" class="miniBtn">✨ 통합탐험</a></div>
+    <div class="mainActionRow ar2"><a href="hubs/index.html?hub=expansion" class="miniBtn hub">🌍 복음확장 허브</a><a href="hubs/index.html?hub=expansion#connections" class="miniBtn">🔗 연결탐험</a><a href="hubs/index.html?hub=expansion#integration" class="miniBtn">✨ 통합탐험</a></div>
+    <div class="mainActionRow ar3"><a href="hubs/index.html?hub=persecution" class="miniBtn hub">⚔️ 박해성장 허브</a><a href="hubs/index.html?hub=persecution#connections" class="miniBtn">🔗 연결탐험</a><a href="hubs/index.html?hub=persecution#integration" class="miniBtn">✨ 통합탐험</a></div>
+    <div class="mainActionRow ar4"><a href="hubs/index.html?hub=mission" class="miniBtn hub">📜 선교서신 허브</a><a href="hubs/index.html?hub=mission#connections" class="miniBtn">🔗 연결탐험</a><a href="hubs/index.html?hub=mission#integration" class="miniBtn">✨ 통합탐험</a></div>
+    <div class="mainActionRow ar5"><a href="hubs/index.html?hub=revelation" class="miniBtn hub">👑 계시소망 허브</a><a href="hubs/index.html?hub=revelation#connections" class="miniBtn">🔗 연결탐험</a><a href="hubs/index.html?hub=revelation#integration" class="miniBtn">✨ 통합탐험</a></div>
   </div>
 </div>
 
