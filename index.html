@@ -261,6 +261,23 @@ body{padding-bottom:92px!important}
 .unifiedDock .coreFlow{margin-bottom:4px!important;}
 .unifiedDock .action[data-link="overview"]{letter-spacing:-.07em!important;}
 </style>
+
+<style id="cen-hub-drawer-position-fix">
+/* CEN hub-list popup position fix: keep 5th hub visible above the fixed bottom navigator */
+.drawer-card,
+.hub-drawer-panel{
+  max-height: calc(100vh - 145px) !important;
+  overflow-y: auto !important;
+  margin-bottom: 92px !important;
+  box-sizing: border-box !important;
+}
+@supports (height: 100dvh){
+  .drawer-card,
+  .hub-drawer-panel{
+    max-height: calc(100dvh - 145px) !important;
+  }
+}
+</style>
 </head>
 <body>
 <div class="app">
